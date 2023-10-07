@@ -5,6 +5,6 @@ namespace Game.Messages
 {
     public class BellActivatedMessage
     {
-        
+
     }
 }

@@ -328,7 +328,7 @@ MonoBehaviour:
     type: 3}
   bellAudio: {fileID: 1839188493664685808}
   notEnoughRingsAudio: {fileID: 4797213072088880315}
-  initialRings: 5
+  initialRings: 3
 --- !u!1 &7491670314147860282
 GameObject:
   m_ObjectHideFlags: 0

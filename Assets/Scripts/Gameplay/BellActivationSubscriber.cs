@@ -20,7 +20,8 @@ namespace Game
 
         private void ProcessBellActivated(BellActivatedMessage e)
         {
-            OnBellActivated.Invoke();
+            if(gameObject.activeInHierarchy)
+                OnBellActivated.Invoke();
         }
 
         private void OnDestroy()

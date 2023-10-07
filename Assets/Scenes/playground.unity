@@ -316,7 +316,7 @@ PrefabInstance:
     - target: {fileID: 2340767190350508127, guid: 4355e4d813626d44fab3924de19fc8d3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -43.4
+      value: -34.9
       objectReference: {fileID: 0}
     - target: {fileID: 2340767190350508127, guid: 4355e4d813626d44fab3924de19fc8d3,
         type: 3}
@@ -326,7 +326,7 @@ PrefabInstance:
     - target: {fileID: 2340767190350508127, guid: 4355e4d813626d44fab3924de19fc8d3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 57.9
+      value: -31.5
       objectReference: {fileID: 0}
     - target: {fileID: 2340767190350508127, guid: 4355e4d813626d44fab3924de19fc8d3,
         type: 3}
@@ -552,11 +552,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1963566425}
-  - component: {fileID: 1963566424}
   - component: {fileID: 1963566423}
   - component: {fileID: 1963566422}
   - component: {fileID: 1963566421}
+  - component: {fileID: 1963566426}
   - component: {fileID: 1963566420}
+  - component: {fileID: 1963566427}
   m_Layer: 0
   m_Name: PostEffectController
   m_TagString: Untagged
@@ -642,30 +643,6 @@ MonoBehaviour:
   widthPixelation: 512
   heightPixelation: 256
   colorPrecision: 16
---- !u!114 &1963566424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1963566419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60add0cab76d469cbdad4b80314cb093, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volumeProfile: {fileID: 11400000, guid: 7bbe35cdf5d69e14abbb03eccedaa5bd, type: 2}
-  isEnabled: 1
-  fogDensity: 4
-  fogDistance: 8
-  fogNear: 0
-  fogFar: 81.3
-  fogAltScale: 10
-  fogThinning: 458
-  noiseScale: 837
-  noiseStrength: 0.029
-  fogColor: {r: 1, g: 1, b: 1, a: 0}
-  ambientColor: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 0}
 --- !u!4 &1963566425
 Transform:
   m_ObjectHideFlags: 0
@@ -681,6 +658,61 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1963566426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963566419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb5275eeb2eabb341a8106bfb9388a87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeProfile: {fileID: 11400000, guid: 7bbe35cdf5d69e14abbb03eccedaa5bd, type: 2}
+  isEnabled: 1
+  fogDensity: 0.1
+  fogDistance: 1
+  fogNear: 1
+  fogFar: 80
+  fogAltScale: 10
+  fogThinning: 458
+  noiseScale: 830
+  noiseStrength: 0.03
+  fogColor: {r: 1, g: 1, b: 1, a: 0}
+  ambientColor: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 0}
+  fogDensityExtreme: 0.8
+  fogDistanceExtreme: 50
+  toExtremeDuration: 10
+  toNormalDuration: 0.75
+--- !u!114 &1963566427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963566419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c68184fa9d87bc24a860b10e22357100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnBellActivated:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1963566426}
+        m_TargetAssemblyTypeName: Game.FogController, Assembly-CSharp
+        m_MethodName: Restore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1985824287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -701,7 +733,7 @@ PrefabInstance:
     - target: {fileID: 2340767190350508127, guid: 4355e4d813626d44fab3924de19fc8d3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 46.7
+      value: 32.8
       objectReference: {fileID: 0}
     - target: {fileID: 2340767190350508127, guid: 4355e4d813626d44fab3924de19fc8d3,
         type: 3}
@@ -711,7 +743,7 @@ PrefabInstance:
     - target: {fileID: 2340767190350508127, guid: 4355e4d813626d44fab3924de19fc8d3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 113.5
+      value: 13.3
       objectReference: {fileID: 0}
     - target: {fileID: 2340767190350508127, guid: 4355e4d813626d44fab3924de19fc8d3,
         type: 3}
@@ -875,6 +907,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1540597655499997218, guid: e9afcede4fdf4b54484867109560f50e,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 1540597655499997218, guid: e9afcede4fdf4b54484867109560f50e,
+        type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
@@ -886,7 +924,7 @@ PrefabInstance:
     - target: {fileID: 1540597655499997219, guid: e9afcede4fdf4b54484867109560f50e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 1540597655499997219, guid: e9afcede4fdf4b54484867109560f50e,
         type: 3}
@@ -896,7 +934,7 @@ PrefabInstance:
     - target: {fileID: 1540597655499997219, guid: e9afcede4fdf4b54484867109560f50e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -138.9
       objectReference: {fileID: 0}
     - target: {fileID: 1540597655499997219, guid: e9afcede4fdf4b54484867109560f50e,
         type: 3}
@@ -955,7 +993,7 @@ PrefabInstance:
     - target: {fileID: 2340767190350508127, guid: 4355e4d813626d44fab3924de19fc8d3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 46.3
       objectReference: {fileID: 0}
     - target: {fileID: 2340767190350508127, guid: 4355e4d813626d44fab3924de19fc8d3,
         type: 3}
@@ -965,7 +1003,7 @@ PrefabInstance:
     - target: {fileID: 2340767190350508127, guid: 4355e4d813626d44fab3924de19fc8d3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.2
+      value: -72.8
       objectReference: {fileID: 0}
     - target: {fileID: 2340767190350508127, guid: 4355e4d813626d44fab3924de19fc8d3,
         type: 3}

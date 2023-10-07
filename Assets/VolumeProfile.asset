@@ -126,13 +126,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f335fb1ffd8684294ad653bf1c7564, type: 3}
   m_Name: ColorAdjustments
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   postExposure:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: 2.02
   contrast:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: 35.4
   colorFilter:
     m_OverrideState: 1
     m_Value: {r: 0.56981134, g: 0.65540797, b: 1, a: 1}
@@ -141,7 +141,7 @@ MonoBehaviour:
     m_Value: 0
   saturation:
     m_OverrideState: 1
-    m_Value: -68.1
+    m_Value: -31
 --- !u!114 &169896938054019971
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -157,10 +157,10 @@ MonoBehaviour:
   active: 1
   fogDensity:
     m_OverrideState: 1
-    m_Value: 9.48
+    m_Value: 4
   fogDistance:
     m_OverrideState: 1
-    m_Value: 2.9
+    m_Value: 8
   fogColor:
     m_OverrideState: 1
     m_Value: {r: 1, g: 1, b: 1, a: 0}

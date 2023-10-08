@@ -54,6 +54,7 @@ namespace StarterAssets
 		// cinemachine
 		private float _cinemachineTargetPitch;
 
+		public float CurrentSpeed => _controller.velocity.magnitude;
 		// player
 		private float _speed;
 		private float _rotationVelocity;
@@ -93,11 +94,11 @@ namespace StarterAssets
 			{
 				_mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 			}
+			_controller = GetComponent<CharacterController>();
 		}
 
 		private void Start()
 		{
-			_controller = GetComponent<CharacterController>();
 			_input = GetComponent<StarterAssetsInputs>();
 #if ENABLE_INPUT_SYSTEM
 			_playerInput = GetComponent<PlayerInput>();

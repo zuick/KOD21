@@ -4753,7 +4753,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f8a23bcc9fd02fd4c946064511518832, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5938,11 +5938,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3982252796418967491, guid: e9afcede4fdf4b54484867109560f50e,
-        type: 3}
-      propertyPath: initialRings
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 7236970234431375528, guid: e9afcede4fdf4b54484867109560f50e,
         type: 3}
       propertyPath: m_Range
@@ -6139,11 +6134,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1782097144, guid: 41ae4765bcaaae84e841aac2a9074b44, type: 3}
       propertyPath: maxDistance
-      value: 20
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1782097144, guid: 41ae4765bcaaae84e841aac2a9074b44, type: 3}
       propertyPath: minDistance
-      value: 2.5
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 1782097144, guid: 41ae4765bcaaae84e841aac2a9074b44, type: 3}
       propertyPath: fpsController

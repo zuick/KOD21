@@ -1,9 +1,5 @@
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.InputSystem;
-using Game.Services;
-using Game.Messages;
-using System;
 
 namespace Game
 {
@@ -12,8 +8,18 @@ namespace Game
         public UnityEvent OnActivate;
         public UnityEvent OnDeactivate;
 
-        public void Activate() { OnActivate.Invoke(); }
-        public void Deactivate() { OnDeactivate.Invoke(); }
+        public bool IsActive { private set; get; }
 
+        public void Activate()
+        {
+            IsActive = true;
+            OnActivate.Invoke();
+        }
+
+        public void Deactivate()
+        {
+            IsActive = false;
+            OnDeactivate.Invoke();
+        }
     }
 }

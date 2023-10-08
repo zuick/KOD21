@@ -40,10 +40,9 @@ namespace Game
                 }
                 else
                 {
-                    var d = distance - minDistance;
-                    var dr = maxDistance - minDistance;
-                    fpsController.MoveSpeed = Mathf.Lerp(0, initialSpeed, d / dr);
-                    fpsController.SprintSpeed = 0;
+                    var t = (distance - minDistance) / (maxDistance - minDistance);
+                    fpsController.MoveSpeed = Mathf.Lerp(0, initialSpeed, t);
+                    fpsController.SprintSpeed = Mathf.Lerp(0, initialSprintSpeed, t);
                 }
             }
         }

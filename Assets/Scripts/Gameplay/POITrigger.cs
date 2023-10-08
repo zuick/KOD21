@@ -10,10 +10,11 @@ namespace Game
     public class POITrigger : MonoBehaviour
     {
         public UnityEvent OnTrigger;
+        [SerializeField] private bool isFinal;
 
         private void OnTriggerEnter(Collider other)
         {
-            MessagesService.Publish(new POITrigger());
+            MessagesService.Publish(new POIActivated(isFinal));
             OnTrigger.Invoke();
         }
     }

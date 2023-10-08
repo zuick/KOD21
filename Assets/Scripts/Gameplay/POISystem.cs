@@ -17,7 +17,7 @@ namespace Game
         private void Awake()
         {
             Activate(currentPointIndex);
-            POITriggerSubscription = MessagesService.Subscribe<POITrigger>(OnPOITrigger);
+            POITriggerSubscription = MessagesService.Subscribe<POIActivated>(OnPOITrigger);
         }
 
         private void Activate(int index)
@@ -31,7 +31,7 @@ namespace Game
             }
         }
 
-        private void OnPOITrigger(POITrigger e)
+        private void OnPOITrigger(POIActivated e)
         {
             if (currentPointIndex < points.Length)
             {

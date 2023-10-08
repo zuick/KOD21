@@ -21,12 +21,13 @@ namespace Game
         {
             rings = initialRings;
             bellActionRef.action.performed += OnBellActivate;
-            POITriggerSubscription = MessagesService.Subscribe<POITrigger>(OnPOITrigger);
+            POITriggerSubscription = MessagesService.Subscribe<POIActivated>(OnPOITrigger);
         }
 
-        private void OnPOITrigger(POITrigger e)
+        private void OnPOITrigger(POIActivated e)
         {
-            rings = initialRings;
+            if(!e.isFinal)
+                rings = initialRings;
         }
 
         private void OnBellActivate(InputAction.CallbackContext ctx)

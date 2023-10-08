@@ -222,10 +222,35 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.891
       objectReference: {fileID: 0}
+    - target: {fileID: 2340767191716274192, guid: 4355e4d813626d44fab3924de19fc8d3,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2340767191716274192, guid: 4355e4d813626d44fab3924de19fc8d3,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2340767191716274192, guid: 4355e4d813626d44fab3924de19fc8d3,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2340767191716274195, guid: 4355e4d813626d44fab3924de19fc8d3,
+        type: 3}
+      propertyPath: isFinal
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2340767191716274195, guid: 4355e4d813626d44fab3924de19fc8d3,
+        type: 3}
+      propertyPath: OnTrigger.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2340767191716274205, guid: 4355e4d813626d44fab3924de19fc8d3,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4355e4d813626d44fab3924de19fc8d3, type: 3}

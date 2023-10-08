@@ -35,22 +35,23 @@ namespace Game
 
         private void OnCancel(InputAction.CallbackContext obj)
         {
-            if (!windowsService.IsActive(exitGameWindow) && !windowsService.IsActive(gameOverWindow))
+            if (!windowsService.IsActive(gameOverWindow))
             {
-                exitGameWindow = windowsService.Open<ConfirmWindow>("Выйти из игры?");
-                exitGameWindow.OnCancel += OnExitPauseMenu;
-                exitGameWindow.OnSubmit += OnExitGame;
+                if (!windowsService.IsActive(exitGameWindow))
+                {
+                    exitGameWindow = windowsService.Open<ConfirmWindow>("Выйти из игры?");
+                    exitGameWindow.OnSubmit += OnExitGame;
+                }
+                else
+                {
+                    windowsService.Close(exitGameWindow);
+                }
             }
         }
 
         private void OnRestart()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
-        }
-
-        private void OnExitPauseMenu()
-        {
-            windowsService.Close(exitGameWindow);
         }
 
         private void OnExitGame()
